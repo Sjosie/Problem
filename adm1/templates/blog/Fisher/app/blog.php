@@ -103,6 +103,18 @@
             {% for post in posts %}
                 {{ post }}
             {% endfor %}
+
+            {{ form.media }}
+    <div class="row form-error">
+        <div class="column" id="content">
+            <form  method="post" action='' enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p  }}
+                <input class="button" type="submit" value="Save">
+            </form>
+        </div>
+    </div>
+
 <?php 
               // LEFT JOIN (
               //   SELECT * FROM `post_tag` GROUP BY `post_id`

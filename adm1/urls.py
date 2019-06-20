@@ -22,5 +22,6 @@ urlpatterns = [
     path('', views.rent_list, name='rent'),
     path('', views.contacts_list, name='contacts'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    url(r'^tinymce/', include('tinymce.urls')),
     
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
